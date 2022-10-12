@@ -1,6 +1,6 @@
-package com.Xworkz.construct.boot;
+package com.Xworkz.example.boot;
 
-import com.Xworkz.construct.NumberLoop;
+import com.Xworkz.example.NumberLoop;
 
 public class NumberLoopRunner {
 
@@ -13,7 +13,7 @@ public class NumberLoopRunner {
 		NumberLoop.num4();
 		NumberLoop.num5();
 		NumberLoop.num6();
-		
+		NumberLoop.num7();
 	}
 
 }
