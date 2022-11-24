@@ -15,17 +15,6 @@ public class Location {
 		this.country=country;
 	}
 
-	/*
-	 * public void setCity(City city) { this.city = city;
-	 * System.out.println("City setted"); }
-	 * 
-	 * public void setState(State state) { this.state = state;
-	 * System.out.println("State setted"); }
-	 * 
-	 * public void setCountry(Country country) { this.country = country;
-	 * System.out.println("Country setted"); }
-	 */
-
 	public void showOff() {
 		System.out.println(this.no);
 		System.out.println(this.street);

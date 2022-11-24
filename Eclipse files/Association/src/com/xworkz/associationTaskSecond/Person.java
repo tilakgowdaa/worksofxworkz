@@ -11,11 +11,6 @@ public class Person {
 		this.job=job;
 	}
 
-	/*
-	 * public void setEmail(Email[] email) { this.email = email; }
-	 * 
-	 * public void setJob(Job job) { this.job = job; }
-	 */
 
 	public void showOff() {
 		System.out.println(this.name);

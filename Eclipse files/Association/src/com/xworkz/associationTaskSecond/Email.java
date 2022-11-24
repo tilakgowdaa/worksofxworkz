@@ -13,10 +13,6 @@ public class Email {
 		this.mobileNo = mobileNo;
 		this.company=company;
 	}
-
-	/*
-	 * public void setCompany(Company company) { this.company=company; }
-	 */
 	
 	public void showOff() {
 		System.out.println(this.id);
