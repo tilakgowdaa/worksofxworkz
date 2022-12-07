@@ -15,6 +15,7 @@ import java.lang.annotation.AnnotationTypeMismatchException;
 import java.lang.annotation.IncompleteAnnotationException;
 import java.lang.instrument.IllegalClassFormatException;
 import java.lang.invoke.WrongMethodTypeException;
+import java.lang.reflect.GenericSignatureFormatError;
 import java.lang.reflect.MalformedParameterizedTypeException;
 import java.nio.BufferOverflowException;
 import java.nio.BufferUnderflowException;
@@ -508,5 +509,70 @@ public class Exception {
 		System.out.println("Running method87");
 		throw new UnknownError();
 	}
-
+	
+	public void method88() {
+		System.out.println("Running method88");
+		throw new BootstrapMethodError();
+	}
+	
+	public void method89() throws  ClassCircularityError {
+		System.out.println("Running method89");
+		throw new  ClassCircularityError();
+	}
+	
+	public void method90() throws ClassFormatError {
+		System.out.println("Running method90");
+		throw new ClassFormatError();
+	}
+	
+	public void method91() throws  ExceptionInInitializerError {
+		System.out.println("Running method91");
+		throw new  ExceptionInInitializerError();
+	}
+	
+	public void method92() throws  IncompatibleClassChangeError {
+		System.out.println("Running method92");
+		throw new  IncompatibleClassChangeError();
+	}
+	
+	public void method93() throws  NoClassDefFoundError {
+		System.out.println("Running method93");
+		throw new  NoClassDefFoundError();
+	}
+	
+	public void method94() throws  UnsatisfiedLinkError {
+		System.out.println("Running method94");
+		throw new  UnsatisfiedLinkError();
+	}
+	
+	public void method95() throws   VerifyError {
+		System.out.println("Running method95");
+		throw new   VerifyError();
+	}
+	
+	public void method96() throws  GenericSignatureFormatError {
+		System.out.println("Running method96");
+		throw new  GenericSignatureFormatError();
+	}
+	
+	public void method97() throws  UnsupportedClassVersionError {
+		System.out.println("Running method97");
+		throw new  UnsupportedClassVersionError();
+	}
+	
+	public void method98() throws  AbstractMethodError {
+		System.out.println("Running method98");
+		throw new  AbstractMethodError();
+	}
+	
+	public void method99() throws  IllegalAccessError {
+		System.out.println("Running method99");
+		throw new  IllegalAccessError();
+	}
+	
+	public void method100()  {
+		System.out.println("Running method100");
+		throw new  NoSuchMethodError();
+	}
 }
+
