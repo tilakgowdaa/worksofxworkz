@@ -15,8 +15,8 @@ public class WarDTO extends AbstractAuditDTO {
 		super();
 	}
 
-	public WarDTO(String name, LocalDateTime startDate, LocalDateTime endDate, String startedBy, String startedWith, String wonBy,
-			int noOfDeaths) {
+	public WarDTO(String name, LocalDateTime startDate, LocalDateTime endDate, String startedBy, String startedWith,
+			String wonBy, int noOfDeaths) {
 		super();
 		this.name = name;
 		this.startDate = startDate;
@@ -30,7 +30,8 @@ public class WarDTO extends AbstractAuditDTO {
 	@Override
 	public String toString() {
 		return "WarDTO [name=" + name + ", startDate=" + startDate + ", endDate=" + endDate + ", startedBy=" + startedBy
-				+ ", startedWith=" + startedWith + ", wonBy=" + wonBy + ", noOfDeaths=" + noOfDeaths + "]";
+				+ ", startedWith=" + startedWith + ", wonBy=" + wonBy + ", noOfDeaths=" + noOfDeaths + ", toString()="
+				+ super.toString() + "]";
 	}
 
 	public String getName() {

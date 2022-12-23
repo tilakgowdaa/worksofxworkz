@@ -9,7 +9,7 @@ import com.xworkz.war.repository.WarRepositoryImpl;
 public class WarDtoRunner {
 
 	public static void main(String[] args) {
-		WarRepository repo = new WarRepositoryImpl();
+		
 
 		WarDTO dto = new WarDTO();
 		dto.setName("First battle of panipat");
@@ -21,6 +21,7 @@ public class WarDtoRunner {
 		dto.setNoOfDeaths(6000);
 		dto.setCreatedBy("System");
 		dto.setCreatedDate(LocalDateTime.now());
+		WarRepository repo = new WarRepositoryImpl();
 		repo.create(dto);
 		System.out.println(dto.getCreatedBy());
 		System.out.println(dto.getCreatedDate());
@@ -31,7 +32,7 @@ public class WarDtoRunner {
 				LocalDateTime.of(1557, 4, 26, 5, 27), "Hemchandra V", "akbar", "Hemchandra V", 7893);
 		repo.create(dto1);
 
-		repo.findByStartedBy("babur");
+		repo.findByStartedBy("bab");
 		repo.findByStartedByAndStartedWith("babur", "Lodi dynasty");
 
 	}

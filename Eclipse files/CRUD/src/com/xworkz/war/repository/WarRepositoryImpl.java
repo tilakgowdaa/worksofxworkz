@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 import com.xworkz.war.dto.WarDTO;
 
 public class WarRepositoryImpl implements WarRepository {
-	private WarDTO[] warDto = new WarDTO[10];
+	private WarDTO[] warDto = new WarDTO[1];
 	private int currentIndex = 0;
 
 	@Override
@@ -35,6 +35,7 @@ public class WarRepositoryImpl implements WarRepository {
 				System.out.println("DTO Matched " + warDTO2);
 				return warDTO2;
 			}
+			
 		}
 		System.out.println("DTO not Matched");
 		return null;
@@ -80,6 +81,8 @@ public class WarRepositoryImpl implements WarRepository {
 		System.out.println("DTO not matched");
 		return null;
 	}
+	
+	
 	
 	
 	
