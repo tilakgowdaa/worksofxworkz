@@ -1,6 +1,7 @@
 package com.xworkz.lamda.Palace.boot;
 
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.stream.Collectors;
 
@@ -16,7 +17,17 @@ public class PalaceRunner {
 
 		collection.stream().filter(dto -> !dto.isDestroyed()).collect(Collectors.toSet())
 				.forEach(dto -> System.out.println(dto));
-
+		System.out.println("===");
+		collection.stream().sorted().forEach(e->System.out.println(e));
+		
+		Comparator<PalaceDTO> ref=(a1,a2)->a2.getName().compareTo(a1.getName());
+		System.out.println("====");
+		collection.stream().sorted(ref).forEach(e->System.out.println(e));
+		
+		Comparator<PalaceDTO> ref1=(b1,b2)->b1.getBuiltin().	
+		
+		
+		
 	}
 
 }

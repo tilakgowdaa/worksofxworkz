@@ -2,7 +2,7 @@ package com.xworkz.lamda.Palace;
 
 import java.io.Serializable;
 
-public class PalaceDTO implements Serializable {
+public class PalaceDTO implements Serializable, Comparable<PalaceDTO> {
 	private String name;
 	private String location;
 	private int builtin;
@@ -11,6 +11,11 @@ public class PalaceDTO implements Serializable {
 
 	public PalaceDTO() {
 		super();
+	}
+
+	@Override
+	public int compareTo(PalaceDTO arg0) {
+		return arg0.name.compareTo(this.name);
 	}
 
 	public PalaceDTO(String name, String location, int builtin, boolean destroyed, double visitingFees) {
