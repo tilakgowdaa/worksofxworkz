@@ -24,7 +24,6 @@ public class PalaceRunner {
 		System.out.println("====");
 		collection.stream().sorted(ref).forEach(e->System.out.println(e));
 		
-		Comparator<PalaceDTO> ref1=(b1,b2)->b1.getBuiltin().	
 		
 		
 		

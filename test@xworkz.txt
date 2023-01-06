@@ -12,27 +12,38 @@ public class MinMax {
 		System.out.println("max : "+Collections.max(collection));
 	}
 }______________________________________________________________________________________
-package com.xworkz;
+package com.xworkz.test1;
 
 public class test2 {
 	public int timmyPetals;
 	public int sarahPetals;
 
-	 boolean find(int timmyPetals,int sarahPetals) {
-		if(timmyPetals%2==0 ) {
-			if(sarahPetals%2!=0) {
+	static boolean find(int timmyPetals, int sarahPetals) {
+		if (timmyPetals % 2 == 0) {
+			if (sarahPetals % 2 != 0) {
 				System.out.println("They are in love");
 				return true;
+			} else {
+				System.out.println("They are not in love");
+				return false;
 			}
-			
-			
-		}
-		else if (timmyPetals%2!=0) {
-			if(sarahPetals%2==0) {
+
+		} else if (timmyPetals % 2 != 0) {
+			if (sarahPetals % 2 == 0) {
 				System.out.println("They are in love");
+				return true;
+			} else {
+				System.out.println("They are not in love");
+				return false;
 			}
-			
+
 		}
+
+		return false;
+	}
+
+}
+
 		________________________________________________________________________________
 
 LinkedList                                ArrayList

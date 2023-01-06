@@ -27,5 +27,6 @@ public class DataBaseRunner {
 		System.out.println("3rd condition");
 		
 		collection.stream().map(dto->dto.getType()).collect(Collectors.toList()).forEach(dto->System.out.println(dto));
+		
 	}
 }

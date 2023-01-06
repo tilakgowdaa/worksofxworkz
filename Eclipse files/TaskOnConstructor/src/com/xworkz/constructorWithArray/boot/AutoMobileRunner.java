@@ -13,7 +13,7 @@ public class AutoMobileRunner {
 		AutoMobile autoMobile=new AutoMobile("Hero", 'P', "Splender", 499143, false, bikeName, companyLocation, bikeLogo, price, totalVehicleManufactured, companyOwnersName);
 			autoMobile.displayDetails();
 			
-		System.out.println(totalVehicleManufactured.length);
+		
 			
 		}
 	
