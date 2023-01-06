@@ -1,0 +1,80 @@
+package com.xworkz.test1;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+
+public class MinMax {
+	public static void main(String[] args) {
+		Collection<Integer> collection = new ArrayList<Integer>(Arrays.asList(45,333,76,29,900,23,900,23,474,654,29,454));
+		System.out.println("min : "+Collections.min(collection));
+		System.out.println("max : "+Collections.max(collection));
+	}
+}______________________________________________________________________________________
+package com.xworkz;
+
+public class test2 {
+	public int timmyPetals;
+	public int sarahPetals;
+
+	 boolean find(int timmyPetals,int sarahPetals) {
+		if(timmyPetals%2==0 ) {
+			if(sarahPetals%2!=0) {
+				System.out.println("They are in love");
+				return true;
+			}
+			
+			
+		}
+		else if (timmyPetals%2!=0) {
+			if(sarahPetals%2==0) {
+				System.out.println("They are in love");
+			}
+			
+		}
+		________________________________________________________________________________
+
+LinkedList                                ArrayList
+*It stores has a nodes                 *It stores in a array
+*It is easy to create list             *It is easy to read.
+*It is easy to manupulate              *It is not easy to manupulate.
+*It uses more memory                   *It uses less memory.
+
+_________________________________________________________________________________-
+
+Generalized class:
+Converting a child type into parent type is known as Generalized class
+
+Specialized class:
+Converting a parent into chlid is known as Generalized class
+_________________________________________________________________________________--
+Static polymorphism
+Static polymorphism is a type of polymorphism that collects the information to call a method during compile time.
+
+Dynamic Polymorphism
+Dynami polymorphism is a type of polymorphism that collects information to call a method at run time.
+
+______________________________________________________________________________________
+
+Hema can achieve data security by using Encapsulation.
+Encapsulation refers to hiding a data and logical from the user showing only required data by using Access specifiers
+________________________________________________________________________________________
+ListIterator                      Iterator
+We can only remove from       we can remove,add,replace the element 
+ the element from the list     by using iterator
+ ________________________________________________________________________________
+ We have used Stream sorted.
+ 
+ ______________________________________________________________________________________
+ [4]
+We can make class has final so that it cannot be inherited by any other class.
+[4b]
+ clone()
+ [4c]
+ By using Delegation.
+ 
+ 
+ _______________________________________________________________________________________
+ 
+ 
