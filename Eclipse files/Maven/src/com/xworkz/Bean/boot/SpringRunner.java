@@ -7,12 +7,12 @@ import java.util.Map;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import com.xworkz.Bean.configuration.TreeConfig;
+import com.xworkz.Bean.configuration.SpringConfig;
 
 public class SpringRunner {
 
 	public static void main(String[] args) {
-		ApplicationContext spring=new AnnotationConfigApplicationContext(TreeConfig.class);
+		ApplicationContext spring=new AnnotationConfigApplicationContext(SpringConfig.class);
 		String[] beanName=spring.getBeanDefinitionNames();
 		System.out.println(Arrays.toString(beanName) );
 		
