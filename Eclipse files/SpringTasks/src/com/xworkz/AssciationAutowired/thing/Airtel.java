@@ -2,7 +2,8 @@ package com.xworkz.AssciationAutowired.thing;
 
 import org.springframework.stereotype.Component;
 
-import com.xworkz.crocodile.interfac.Provider;
+import com.xworkz.AssciationAutowired.interfaces.Provider;
+
 @Component
 public class Airtel implements Provider {
 	

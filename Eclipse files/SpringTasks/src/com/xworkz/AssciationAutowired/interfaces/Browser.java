@@ -1,4 +1,4 @@
-package com.xworkz.crocodile.interfac;
+package com.xworkz.AssciationAutowired.interfaces;
 
 public interface Browser {
 	

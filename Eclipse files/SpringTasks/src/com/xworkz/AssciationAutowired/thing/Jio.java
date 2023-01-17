@@ -1,8 +1,8 @@
-package com.xworkz.crocodile.things;
-
+package com.xworkz.AssciationAutowired.thing;
 import org.springframework.stereotype.Component;
 
-import com.xworkz.crocodile.interfac.Provider;
+import com.xworkz.AssciationAutowired.interfaces.Provider;
+
 @Component
 public class Jio implements Provider {
 	
