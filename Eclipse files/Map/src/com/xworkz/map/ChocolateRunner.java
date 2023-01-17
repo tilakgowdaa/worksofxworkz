@@ -9,7 +9,7 @@ import java.util.Set;
 public class ChocolateRunner {
 
 	public static void main(String[] args) {
-		Map<String, Double> map=new HashMap();
+		Map<String, Double> map=new HashMap<String, Double>();
 		map.put("DairyMilk", 100D);
 		map.put("Silk", 120D);
 		map.put("5_Star", 10D);

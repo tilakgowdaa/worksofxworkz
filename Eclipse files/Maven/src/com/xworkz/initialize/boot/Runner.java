@@ -11,7 +11,7 @@ import com.xworkz.initialize.thing.Season;
 public class Runner {
 	public static void main(String[] args) {
 		ApplicationContext spring=new AnnotationConfigApplicationContext(TaskConfig.class);
-		Rocket refOfRocket=spring.getBean( Rocket.class);
+		Rocket refOfRocket=spring.getBean( "rocket",Rocket.class);
 		System.out.println(refOfRocket.toString());
 		System.out.println(refOfRocket.getCountry());
 		System.out.println(refOfRocket.getName());
