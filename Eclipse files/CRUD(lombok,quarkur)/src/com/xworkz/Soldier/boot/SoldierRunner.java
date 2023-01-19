@@ -7,9 +7,9 @@ import com.xworkz.Soldier.service.SoldierServiceImpl;
 public class SoldierRunner {
 
 	public static void main(String[] args) {
-		SoldierDTO dto=new SoldierDTO("Sandeep", 2, "Second", "BSF", "India");
-		SoldierRepositoryImpl repo=new SoldierRepositoryImpl();
-		SoldierServiceImpl service=new SoldierServiceImpl(repo);
+		SoldierDTO dto = new SoldierDTO("Sandeep", 2, "Second", "BSF", "India");
+		SoldierRepositoryImpl repo = new SoldierRepositoryImpl();
+		SoldierServiceImpl service = new SoldierServiceImpl(repo);
 		service.validateAndSave(dto);
 	}
 

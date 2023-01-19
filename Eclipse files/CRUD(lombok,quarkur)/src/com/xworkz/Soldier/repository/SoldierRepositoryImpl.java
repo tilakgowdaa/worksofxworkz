@@ -7,7 +7,7 @@ public class SoldierRepositoryImpl implements SoldierRepository{
 	@Override
 	public boolean save(SoldierDTO dto) {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 	
 }
