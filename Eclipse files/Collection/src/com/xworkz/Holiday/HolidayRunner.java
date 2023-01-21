@@ -17,6 +17,9 @@ public class HolidayRunner {
 
 		boolean contain = collection.contains(dto);
 		System.out.println(contain);
+		
+		
+		collection.forEach(c->System.out.println(c.getHolidayOn()));
 	}
 
 }

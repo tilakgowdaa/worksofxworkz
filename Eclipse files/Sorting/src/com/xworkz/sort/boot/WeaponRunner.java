@@ -35,7 +35,7 @@ public class WeaponRunner {
 		collection.add(new WeaponDTO("Pan", "UK", "1999", 500, Type.Melee));
 		
 		System.out.println("Sort by Price in greater");		
-		Comparator<WeaponDTO> ref=(a1,a2)->Double.compare(a2.getPrice(), a1.getPrice());
+		Comparator<WeaponDTO> ref=(a1,a2)->Integer.compare(a2.getPrice(), a.getPrice());
 		collection.stream().sorted(ref).collect(Collectors.toList()).forEach(ele->System.out.println(ele));
 		
 		System.out.println("Sort by madeBy and madeOn");

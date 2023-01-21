@@ -1,0 +1,121 @@
+                     Iterable
+					 
+					 Collection
+List          Set              Queue
+*LinkedList   *TreeSet         Deque
+*ArrayList    *LinkedSet
+              *sortedSet
+              *LinkedHashSet
+			  
+			  
+Collection is a framework which is used to store and manipulate the data.
+
+List                                    Set
+List is Index based                    Set is non index Based
+List are positional accessed            Set are not positional accessed
+List can be duplicated                 Set cannot be duplicated 
+List will be in insertional order       Set will be unordered
+
+LinkedList                              Arraylist
+It initially in the form of nodes     It will be array based
+Manipulation is fast                   manipulation is slow
+Create and read operation is slow      Create and read operation is fast
+It requires more memory                It requires less memory
+
+3)Hashset                                                     TreeSet
+ *In HashSet, only an element can be null.                *It does not allow null elements.
+ *It uses hashCode() or equals() method for comparison   *It uses compare() or compareTo() method for comparison.
+ *Internally it uses HashMap to store its elements        *Internally it uses TreeMap to store its elements
+ 
+ 4)hash map implemets  of hashcode() is native  because there is not any direct method in java to an 
+ referance of object
+ 
+ 6) String S="Shubam";
+    InStream char=s.chars();
+	
+7)SplitIterator is a Interface it transfer elements of sorce.
+
+8)String operation wit stream
+*startswith
+*endswith
+*equals
+*contains
+*isuppercase
+*islowercase
+9)Spring core  is the core of the framework that power features such as 
+Inversion of Control and dependency injection
+
+10)Dependency Injection is a fundamental aspect of the Spring framework, 
+through which the Spring container
+ “injects” objects into other objects or “dependencies”
+
+ 
+ 13) *StringBuilder in Java is a class used to create a mutable
+ or in other words, a modifiable succession of characters
+ *The StringBuffer class is used to create mutable string. 
+ It is same as String class except it is mutable and thread-safe
+ 
+ _______________________________________________________________________________________
+ 
+ package com.xworkz.test1;
+
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+import java.util.TreeMap;
+
+public class Country {
+	public static void main(String[] args) {
+		Map<String, Integer> map=new TreeMap<String, Integer>();
+		map.put("India", 91);
+		map.put("UK", 32);
+		map.put("USA", 13);
+		map.put("UAE", 42);
+		map.put("China", 52);
+		
+		Set<Entry<String, Integer>> entry= map.entrySet();
+		entry.forEach(ele->System.out.println(ele));
+		
+		map.forEach((key,value)->{if(value==52) {System.out.println(key);}});
+			
+		Iterator<Entry<String, Integer>> itr=entry.iterator();
+		while(itr.hasNext()) {
+			Entry<String, Integer> ent= itr.next();
+			if(ent.getValue()==42) {
+				itr.remove();
+				for (Entry<String, Integer> entry2 : entry) {
+					System.out.println(entry2);
+				}
+			}
+		}
+		
+		
+	}
+}
+________________________________________________________________________________________
+
+package com.xworkz.test1;
+
+import java.util.LinkedList;
+
+public class LinkList {
+	public static void main(String[] args) {
+
+		LinkedList<Integer> list = new LinkedList<Integer>();
+		list.add(12);
+		list.add(123);
+		list.add(23);
+		list.add(2354);
+
+		list.forEach(ele -> System.out.println(ele));
+		list.removeFirst();
+		System.out.println("removed first");
+		list.forEach(ele -> System.out.println(ele));
+		list.removeLast();
+
+		System.out.println("removed last");
+		list.forEach(ele -> System.out.println(ele));
+
+	}
+}
