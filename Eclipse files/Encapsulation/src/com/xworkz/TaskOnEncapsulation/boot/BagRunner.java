@@ -9,7 +9,6 @@ public class BagRunner {
 		Bag bag = new Bag();
 		bagIn.use(bag);
 		System.out.println(bag.getBrand());
-
 	}
 
 }
