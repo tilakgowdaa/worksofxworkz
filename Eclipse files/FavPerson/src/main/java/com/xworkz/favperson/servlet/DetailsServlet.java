@@ -36,9 +36,7 @@ public class DetailsServlet extends HttpServlet {
 		req.setAttribute("gender", gender);
 		req.setAttribute("reason", reason);
 		req.setAttribute("address", address);
-		
 		dispatcher.forward(req, resp);
-		
-		
+
 	}
 }

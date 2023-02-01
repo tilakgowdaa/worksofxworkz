@@ -23,11 +23,11 @@ public class KingServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		System.out.println("running doGet in kingServlet");
-		String name = req.getParameter("KingName");
-		String region = req.getParameter("region");
-		String noOfQueens = req.getParameter("queens");
-		String birth = req.getParameter("dateOfBirth");
-		String death = req.getParameter("dateOfDeath");
+		String name=req.getParameter("KingName");
+		String region=req.getParameter("region");
+		String noOfQueens=req.getParameter("queens");
+		String birth=req.getParameter("dateOfBirth");
+		String death=req.getParameter("dateOfDeath");
 		
 		System.out.println(name);
 		System.out.println(region);
@@ -35,8 +35,8 @@ public class KingServlet extends HttpServlet {
 		System.out.println(birth);
 		System.out.println(death);
 		
-		PrintWriter writer=resp.getWriter();
-		writer.print("king Data is sent successfully");
+		PrintWriter writer= resp.getWriter();
+		writer.print("the king detail is sent");
 		resp.setContentType("text/plain");
 	}
 

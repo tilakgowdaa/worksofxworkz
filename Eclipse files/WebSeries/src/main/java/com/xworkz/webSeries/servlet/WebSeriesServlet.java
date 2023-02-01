@@ -41,11 +41,11 @@ public class WebSeriesServlet extends HttpServlet {
 		writer.print("<body>");
 		writer.print("<h1>");
 		writer.print("<span style='color:blue;'>");
-		writer.print("Data sent successfully");
+		writer.print(name +" Data sent successfully");
 		writer.print("<h1/>");
 		writer.print("<body/>");
 		writer.print("<html/>");
-		resp.setContentType("text/html");	
+		resp.setContentType("text/plain");	
 	}
 	
 	
