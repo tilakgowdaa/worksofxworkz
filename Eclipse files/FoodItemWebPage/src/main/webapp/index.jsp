@@ -15,8 +15,9 @@
      X-works ODC
     </a>
  
-  
-  <a href="fooditem.jsp" style="color: white;" class="btn btn-outline-success" >Food Item</a>
+  <div>
+  <a href="fooditem.jsp" style="color: white;"  class="btn btn-outline-success"  >Food Item</a><a href="interview.jsp" style="color: white;" class="btn btn-outline-success" >Interview</a>
+  </div>
    </div>
 </nav>
 <body>
