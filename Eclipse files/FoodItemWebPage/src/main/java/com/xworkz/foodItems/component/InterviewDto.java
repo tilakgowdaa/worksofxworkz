@@ -4,8 +4,8 @@ import lombok.Data;
 
 @Data
 public class InterviewDto {
-private String inter;
-private String company;
-private String role;
+	private String inter;
+	private String company;
+	private String role;
 
 }
