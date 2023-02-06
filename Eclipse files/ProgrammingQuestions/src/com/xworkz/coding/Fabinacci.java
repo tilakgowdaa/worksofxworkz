@@ -2,14 +2,14 @@ package com.xworkz.coding;
 
 public class Fabinacci {
 	public static void main(String[] args) {
-		int n=6;
+		int n=20;
 		int f=0;
 		int s=1;
 		int t;
 		
 		System.out.println(f);
 		System.out.println(s);
-		for (int i = 3; i <=n; i++) {
+		for (int i = 0; i <=n; i++) {
 			t=f+s;
 			System.out.println(t);
 			f=s;

@@ -1,7 +1,8 @@
-package com.Xworkz.example;
+package com.Xworkz.example.boot;
 
 public class EvenOdd {
-	public static void checkEven() {
+	public static void main(String[] args) {
+
 		int num = 9;
 		if (num % 2 == 0) {
 			System.out.println("number is even");
@@ -9,5 +10,4 @@ public class EvenOdd {
 			System.out.println("number is odd");
 		}
 	}
-
 }
