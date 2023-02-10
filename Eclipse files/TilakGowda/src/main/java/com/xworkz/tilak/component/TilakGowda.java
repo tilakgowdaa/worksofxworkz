@@ -5,8 +5,6 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.swing.border.BevelBorder;
-
 import org.springframework.stereotype.Component;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -114,10 +112,10 @@ public class TilakGowda {
 		dto.setLearntJava(true);
 		dto.setSslcPercentage(90.64);
 		dto.setTrainingInstitute("x-workz");
-		model.addAttribute("info",dto);
+		model.addAttribute("info", dto);
 		return "index.jsp";
 	}
-	
+
 	@PostMapping("/family")
 	public String onFamily(Model model) {
 		System.out.println("Running onFamily");
@@ -132,10 +130,10 @@ public class TilakGowda {
 		dto.setSiblingName("Vedha");
 		dto.setSiblingRelation("Sister");
 		dto.setSiblings(true);
-		model.addAttribute("fam",dto);
+		model.addAttribute("fam", dto);
 		return "index.jsp";
 	}
-	
+
 	@PostMapping("/mobiledto")
 	public String onMobileDTO(Model model) {
 		System.out.println("Running onMobileDTO");
@@ -145,10 +143,10 @@ public class TilakGowda {
 		dto.setModel("note 8 pro");
 		dto.setNoOfSim(1);
 		dto.setSimCompany("airtel");
-		model.addAttribute("sim",dto);
+		model.addAttribute("sim", dto);
 		return "index.jsp";
 	}
-	
+
 	@PostMapping("/juice")
 	public String onJuice1(Model model) {
 		System.out.println("Running onJuice");
@@ -161,10 +159,10 @@ public class TilakGowda {
 		dto.setPrice(40);
 		dto.setQuantity(750);
 		dto.setTastesGood(true);
-		model.addAttribute("drink",dto);
+		model.addAttribute("drink", dto);
 		return "index.jsp";
 	}
-	
+
 	@PostMapping("/chat")
 	public String onChats(Model model) {
 		System.out.println("Running onChats");
@@ -180,7 +178,7 @@ public class TilakGowda {
 		dto.setShopName("Lakshmi");
 		dto.setShopOpensAt(LocalTime.of(05, 00));
 		dto.setTastesGood(true);
-		model.addAttribute("chat",dto);
+		model.addAttribute("chat", dto);
 		return "index.jsp";
 	}
 }
