@@ -30,6 +30,7 @@
 			X-works ODC
 		</a>
 		<a href="Egg.jsp" class="btn btn-success">Order</a>
+		<a href="Cm.jsp" class="btn btn-success">Chief Minister</a>
 
 	</div>
 	

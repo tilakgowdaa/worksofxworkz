@@ -87,7 +87,7 @@
 <div class="form-check">
   <input class="form-check-input" type="radio" value="false" id="flexCheckChecked" name="takeAway" checked>
   <label class="form-check-label" for="flexCheckChecked">
-   No
+ No
   </label>
 </div>
 			
