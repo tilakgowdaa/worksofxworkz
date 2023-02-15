@@ -45,13 +45,13 @@
 
 <div class="mb-3">
 				<label for="formFile" class="form-label">Name</label> <input
-					class="form-control" type="text" id="name" name="name"
+					class="form-control" type="text" value="${dto.name}" id="name" name="name"
 					placeholder="Enter the name">
 			</div>
 			
 			<div class="mb-3">
 				<label for="formFile" class="form-label">Valentine Name</label> <input
-					class="form-control" type="text" id="name" name="valentineName"
+					class="form-control" type="text" id="name" value="${dto.valentineName}" name="valentineName"
 					placeholder="Enter the Valentine name">
 			</div>
 			

@@ -41,7 +41,7 @@ public class ValentineController {
 	@PostMapping
 	public String onValentine(Model model, ValentineDTO valentineDto) {
 		System.out.println("Running onValentine in Postmapping");
-
+		System.out.println(valentineDto);
 		Set<ConstraintViolation<ValentineDTO>> violation = this.service.validateAndSave(valentineDto);
 		if (!violation.isEmpty()) {
 			System.out.println("Violations: ");
@@ -49,9 +49,10 @@ public class ValentineController {
 			model.addAttribute("places", places);
 			model.addAttribute("gifts", gifts);
 			model.addAttribute("violation", violation);
+			model.addAttribute("dto",valentineDto);
 			return "Valentine";
 		}
-		System.out.println("No violations");
+		System.out.println("No violations in controller");
 
 		return "ValentineSuccess";
 

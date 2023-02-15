@@ -8,12 +8,19 @@ import javax.validation.Validation;
 import javax.validation.Validator;
 import javax.validation.ValidatorFactory;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.xworkz.valentine.dto.ValentineDTO;
+import com.xworkz.valentine.entity.ValentineEntity;
+import com.xworkz.valentine.repository.ValentineRepository;
+
 
 @Service
 public class ValentineServiceImpl implements ValentineService {
+
+	@Autowired
+	private ValentineRepository valentineRepo;
 
 	@Override
 	public Set<ConstraintViolation<ValentineDTO>> validateAndSave(ValentineDTO valentineDto) {
@@ -26,7 +33,15 @@ public class ValentineServiceImpl implements ValentineService {
 			return violation;
 		}
 		System.out.println("No violations");
+		ValentineEntity entity = new ValentineEntity();
+		entity.setName(valentineDto.getName());
+		entity.setValentineName(valentineDto.getValentineName());
+		entity.setPlaces(valentineDto.getPlaces());
+		entity.setGifts(valentineDto.getGifts());
+		boolean saved = this.valentineRepo.save(entity);
+		System.out.println("ValentineEntity saved :" + saved);
 		return Collections.emptySet();
+
 	}
 
 }

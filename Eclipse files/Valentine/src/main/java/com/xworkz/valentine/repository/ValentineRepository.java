@@ -1,5 +1,7 @@
 package com.xworkz.valentine.repository;
 
-public interface ValentineRepository {
+import com.xworkz.valentine.entity.ValentineEntity;
 
+public interface ValentineRepository {
+	boolean save(ValentineEntity entity);
 }
