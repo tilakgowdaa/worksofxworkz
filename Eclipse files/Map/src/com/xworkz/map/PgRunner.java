@@ -33,7 +33,7 @@ public class PgRunner {
 		values.forEach(ele->System.out.println(ele));
 		
 		 Set<Entry<String, Double>> pair=ref1.entrySet();
-		 pair.forEach(ele->System.out.println(ele));
+		 pair.forEach(ele->System.out.println(ele.getKey()));
 		 
 		 
 		

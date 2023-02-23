@@ -23,7 +23,6 @@ public class ValentineRepositoryImpl implements ValentineRepository {
 		entityManager.persist(entity);
 		transaction.commit();
 		entityManager.close();
-		
 		return true;
 	}
 
