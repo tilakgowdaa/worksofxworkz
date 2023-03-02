@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 
-import javax.annotation.Generated;
 import javax.validation.ConstraintViolation;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,15 +56,15 @@ public class AeroplaneController {
 		return "AeroplaneSuccess";
 
 	}
-	
+
 	@GetMapping("/search")
-	public String onSearch(Model model,@RequestParam int id) {
+	public String onSearch(Model model, @RequestParam int id) {
 		System.out.println("Runnig onSearch");
-		AeroplaneDTO aeroplaneDTO= this.service.findById(id);
-		if(aeroplaneDTO!=null) {
-			model.addAttribute("DTO",aeroplaneDTO);
-		}else {
-			model.addAttribute("msg","Do not Found");
+		AeroplaneDTO aeroplaneDTO = this.service.findById(id);
+		if (aeroplaneDTO != null) {
+			model.addAttribute("DTO", aeroplaneDTO);
+		} else {
+			model.addAttribute("msg", "Do not Found");
 		}
 		return "AeroplaneSearch";
 	}

@@ -1,9 +1,8 @@
 package com.xworkz.aeroplane.repository;
 
-import javax.persistence.EntityManager;
+import javax.persistence.EntityManager; 
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
-import javax.transaction.Transaction;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;

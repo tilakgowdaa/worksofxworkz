@@ -58,7 +58,7 @@ public class AeroplaneServiceImpl implements AeroplaneService {
 				aeroplaneDTO.setCountry(aeroplaneEntity.getCountry());
 				aeroplaneDTO.setName(aeroplaneEntity.getName());
 				aeroplaneDTO.setType(aeroplaneEntity.getType());
-				aeroplaneDTO.setId(aeroplaneEntity.getId());
+				//aeroplaneDTO.setId(aeroplaneEntity.getId());
 				return aeroplaneDTO;
 			}
 		}
