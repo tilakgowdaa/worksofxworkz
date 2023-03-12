@@ -70,8 +70,7 @@ class Tablet{
 				String ref2=otherTablet[position];
 				System.out.println(ref2);
 			}
-		}
-		else{
+		}		else{
 			System.out.println("array is null");
 			}
 

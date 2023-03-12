@@ -16,7 +16,7 @@ public class DataBaseRunner {
 		collection.add(new DataBaseVendorDTO("Oracle", "Larry Ellison", Size.ten, 60000, Type.rationalDataBase));
 		collection.add(new DataBaseVendorDTO("IBM", "Thomas Watson", Size.fifteen, 90000, Type.rationalDataBase));
 		System.out.println("1st condition");
-		 collection.stream().map(dto->dto.getDevelopedBy().toUpperCase()).collect(Collectors.toList()).forEach(dto->System.out.println(dto));
+		 collection.stream().map(dto->dto.getDevelopedBy().toUpperCase()).collect(Collectors.toList()).forEach(cv->System.out.println(cv));
 
 		System.out.println("2nd condition");
 

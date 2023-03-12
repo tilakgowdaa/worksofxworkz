@@ -22,28 +22,25 @@
 
 <body style="background-image: url('https://c1.wallpaperflare.com/preview/866/867/579/airplanes-clouds-earth-flight.jpg');">
 
+
 	<nav class="navbar navbar-dark bg-dark">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#"> <img
 				src="https://x-workz.in/static/media/Logo.cf195593dc1b3f921369.png"
 				alt="" width="80" height="44" class="d-inline-block align-text-top">
 				X-works ODC
-			</a> <a href="index.jsp" class="btn btn-success">Home</a>
-
+							</a> <a href="index.jsp" class="btn btn-success">Home</a>
+				
 		</div>
+		
 
 	</nav>
+	
 
-	<h1>Search By Name</h1>
-	
-	<span style="color: red">${msg }</span>
-	<span style="color: red">${delete }${id }</span>
-	<span style="color: red">${notDeleted }</span>
-	
-	<form action="findByName" method="get" >
-	<input type="text" name="name" placeholder="Enter the name">
-	<input type="submit" name="Submit">
-	</form>
+
+	<br>
+	<h2 style="color: blue">Our Amusement Parks</h2>
+	<span style="color: red">${delete }</span>
 	<table class="table table-bordered" border="2">
 	<tr>
 	<th>ID
@@ -55,7 +52,7 @@
 	<th>Edit
 	<th>Delete
 	</tr>
-	<c:forEach var="L" items="${list }">
+	<c:forEach var="L" items="${dto }">
 	<tr>
 	
 	<td>${L.id }</td>
@@ -64,9 +61,9 @@
 	<td>${L.entryFee }</td>
 	<td>${L.ticketType }</td>
 	<td>${L.childrenAllowed }</td>
-	
 	<td><a href="update?id=${L.id}">edit</a></td>
-	<td><a href="delete?id=${L.id }" class="btn btn-danger">Delete</a></td>
+	<td><a href="deleteInAll?id=${L.id }" class="btn btn-danger">Delete</a></td>
+	
 	</tr>
 	
 	</c:forEach>
@@ -74,6 +71,6 @@
 	
 	</table>
 	
-	
+
 </body>
 </html>

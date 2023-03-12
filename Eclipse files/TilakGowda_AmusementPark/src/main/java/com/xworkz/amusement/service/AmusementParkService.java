@@ -5,8 +5,6 @@ import java.util.Set;
 
 import javax.validation.ConstraintViolation;
 
-import org.springframework.web.bind.annotation.RequestParam;
-
 import com.xworkz.amusement.dto.AmusementParkDTO;
 
 public interface AmusementParkService {
@@ -20,10 +18,22 @@ public interface AmusementParkService {
 	default List<AmusementParkDTO> findByName(String name) {
 		return null;
 	}
-	
+
 	Set<ConstraintViolation<AmusementParkDTO>> validateAndUpdate(AmusementParkDTO amusementParkDTO);
 
 	default boolean validateAnddelete(int id) {
 		return false;
+	}
+	
+	default List<AmusementParkDTO> findAll() {
+		return null;
+	}
+	
+	default List<AmusementParkDTO> validateAndfindByPrice(double entryFee) {
+		return null;
+	}
+	
+	default List<AmusementParkDTO> findByNameAndPrice(String name,double entryFee) {
+		return null;
 	}
 }

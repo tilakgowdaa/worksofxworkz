@@ -19,4 +19,16 @@ public interface AmusementParkRepository {
 	boolean update(AmusementParkEntity amusementParkEntity);
 	
 	boolean delete(int id);
+	
+	default List<AmusementParkEntity> findAll(){
+		return null;
+	}
+	
+	default List<AmusementParkEntity> findByPrice(double entryFee){
+		return null;
+	}
+	
+	default List<AmusementParkEntity> findByNameAndPrice(String name ,double entryFee){
+		return null;
+	}
 }

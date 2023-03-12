@@ -34,6 +34,11 @@ public class Coupon {
 		System.out.println(collection.size());
 		collection.clear();
 		System.out.println(collection.size());
+		
+		
 	}
+	
+	
+	
 
 }

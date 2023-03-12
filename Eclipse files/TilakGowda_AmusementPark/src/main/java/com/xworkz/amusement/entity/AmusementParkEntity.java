@@ -14,6 +14,9 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @NamedQuery(name = "findByName",query = "select entity from AmusementParkEntity entity where entity.name=:set")
+@NamedQuery(name = "findAll" ,query = "from AmusementParkEntity")
+@NamedQuery(name = "findByPrice" ,query = "select entity from AmusementParkEntity entity where entity.entryFee=:price")
+@NamedQuery(name = "findByNameAndPrice" ,query = "select entity from AmusementParkEntity entity where entity.name=:name And entity.entryFee=:price")
 public class AmusementParkEntity {
 	@Id
 	@Column(name = "id")

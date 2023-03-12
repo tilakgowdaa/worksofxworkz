@@ -3,6 +3,7 @@ package com.xworkz.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.GenericServlet;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -49,7 +50,7 @@ public class MethodServlet extends HttpServlet {
 		String data="Some data is here";
 		 PrintWriter writer= resp.getWriter();
 		 writer.print(data);
-		 resp.setContentType("text/bold");
+		 resp.setContentType("html/bold");
 	}
 
 	@Override
@@ -63,4 +64,12 @@ public class MethodServlet extends HttpServlet {
 		System.out.println("Running doTrace Method");
 
 	}
+	
+	@Override
+	public void destroy() {
+		// TODO Auto-generated method stub
+		super.destroy();
+	}
+	
+	GenericServlet genericServlet;
 }

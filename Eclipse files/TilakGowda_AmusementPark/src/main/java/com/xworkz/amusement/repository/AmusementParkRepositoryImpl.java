@@ -77,8 +77,8 @@ public class AmusementParkRepositoryImpl implements AmusementParkRepository {
 		System.out.println("Running delete");
 		EntityManager entityManager = this.entityManagerFactory.createEntityManager();
 		EntityTransaction entityTransaction = entityManager.getTransaction();
-		AmusementParkEntity del=entityManager.find(AmusementParkEntity.class, id);
-		
+		AmusementParkEntity del = entityManager.find(AmusementParkEntity.class, id);
+
 		entityTransaction.begin();
 		entityManager.remove(del);
 		entityTransaction.commit();
@@ -86,6 +86,37 @@ public class AmusementParkRepositoryImpl implements AmusementParkRepository {
 
 		return true;
 
+	}
+
+	@Override
+	public List<AmusementParkEntity> findAll() {
+		System.out.println("Running findAll");
+		EntityManager entityManagerFactory = this.entityManagerFactory.createEntityManager();
+		Query query = entityManagerFactory.createNamedQuery("findAll");
+		List<AmusementParkEntity> ent = query.getResultList();
+
+		return ent;
+	}
+
+	@Override
+	public List<AmusementParkEntity> findByPrice(double entryFee) {
+		System.out.println("Running findByPrice");
+		EntityManager entityManager = this.entityManagerFactory.createEntityManager();
+		Query query = entityManager.createNamedQuery("findByPrice");
+		query.setParameter("price", entryFee);
+		List<AmusementParkEntity> priceList = query.getResultList();
+		return priceList;
+	}
+
+	@Override
+	public List<AmusementParkEntity> findByNameAndPrice(String name, double entryFee) {
+		System.out.println("Running findByNameAndPrice");
+		EntityManager entityManager= this.entityManagerFactory.createEntityManager();
+		Query query= entityManager.createNamedQuery("findByNameAndPrice");
+		query.setParameter("name", name);
+		query.setParameter("price", entryFee);
+		List<AmusementParkEntity> entity=query.getResultList();
+		return entity;
 	}
 
 }

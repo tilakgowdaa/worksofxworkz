@@ -20,7 +20,8 @@
 </head>
 
 
-<body style="background-image: url('https://c0.wallpaperflare.com/preview/306/325/83/landscape-photography-of-carnival.jpg');">
+<body
+	style="background-image: url('https://c0.wallpaperflare.com/preview/306/325/83/landscape-photography-of-carnival.jpg');">
 
 	<nav class="navbar navbar-dark bg-dark">
 		<div class="container-fluid">
@@ -28,15 +29,17 @@
 				src="https://x-workz.in/static/media/Logo.cf195593dc1b3f921369.png"
 				alt="" width="80" height="44" class="d-inline-block align-text-top">
 				X-works ODC
-			</a> <a href="park" class="btn btn-success">Amusement Park</a>
-
+			</a> <a href="park" class="btn btn-success">Register Amusement Park</a> <a
+				href="findAll" class="btn btn-success">Our Amusement Parks</a>
+				<a
+				href="NameAndPrice.jsp" class="btn btn-success">FindByNameAndEntryFee</a>
 		</div>
 
 	</nav>
-	
 
-<br>
-	<h2 style="color: white ">Welcome to Amusement Park Info</h2>
-	
+
+	<br>
+	<h2 style="color: white">Welcome to Amusement Park Info</h2>
+
 </body>
 </html>

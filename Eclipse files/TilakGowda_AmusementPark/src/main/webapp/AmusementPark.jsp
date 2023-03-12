@@ -30,6 +30,7 @@
 				X-works ODC
 			</a> <a href="Search.jsp" class="btn btn-success">Search</a>
 			</a> <a href="SearchByName.jsp" class="btn btn-success">Search By Name</a>
+			<a href="findAll">Our Amusement Parks</a>
 
 		</div>
 
@@ -38,7 +39,9 @@
 
 	<h1>Enter AmusementPark details</h1>
 
-
+<c:forEach items="${cat }" var="V">
+<span style="color:red">${V }</span>
+</c:forEach>
 
 	<form action="park" method="post">
 

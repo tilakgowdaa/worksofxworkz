@@ -124,21 +124,73 @@ public class AmusementParkServiceImpl implements AmusementParkService {
 		if (id < 0) {
 			return false;
 		} else {
-			boolean deleted=this.amusementParkRepo.delete(id);
-			System.out.println("Deleted: "+deleted);
+			boolean deleted = this.amusementParkRepo.delete(id);
+			System.out.println("Deleted: " + deleted);
 			return deleted;
-//			AmusementParkDTO amusementParkDTO = this.findByID(id);
-//			AmusementParkEntity entity = new AmusementParkEntity();
-//			entity.setAddress(amusementParkDTO.getAddress());
-//			entity.setChildrenAllowed(amusementParkDTO.isChildrenAllowed());
-//			entity.setEntryFee(amusementParkDTO.getEntryFee());
-//			entity.setId(amusementParkDTO.getId());
-//			entity.setName(amusementParkDTO.getName());
-//			entity.setTicketType(amusementParkDTO.getTicketType());
-//			boolean deleted=this.amusementParkRepo.delete(entity);
-//			return deleted;
 		}
 
 	}
 
+	@Override
+	public List<AmusementParkDTO> findAll() {
+		System.out.println("Running findAll in sevice");
+		List<AmusementParkEntity> entity = this.amusementParkRepo.findAll();
+		List dtoList = new ArrayList<AmusementParkDTO>();
+		for (AmusementParkEntity dtos : entity) {
+			AmusementParkDTO dto = new AmusementParkDTO();
+			dto.setAddress(dtos.getAddress());
+			dto.setChildrenAllowed(dtos.isChildrenAllowed());
+			dto.setEntryFee(dtos.getEntryFee());
+			dto.setId(dtos.getId());
+			dto.setName(dtos.getName());
+			dto.setTicketType(dtos.getTicketType());
+			dtoList.add(dto);
+		}
+		return dtoList;
+	}
+
+	@Override
+	public List<AmusementParkDTO> validateAndfindByPrice(double entryFee) {
+		System.out.println("Running validateAndfindByPrice");
+		if (entryFee > 0) {
+			List<AmusementParkEntity> entity = this.amusementParkRepo.findByPrice(entryFee);
+			List<AmusementParkDTO> dto = new ArrayList<AmusementParkDTO>();
+			for (AmusementParkEntity ent : entity) {
+				AmusementParkDTO amusementParkDTO = new AmusementParkDTO();
+				amusementParkDTO.setAddress(ent.getAddress());
+				amusementParkDTO.setChildrenAllowed(ent.isChildrenAllowed());
+				amusementParkDTO.setEntryFee(ent.getEntryFee());
+				amusementParkDTO.setId(ent.getId());
+				amusementParkDTO.setTicketType(ent.getTicketType());
+				amusementParkDTO.setName(ent.getName());
+				dto.add(amusementParkDTO);
+			}
+			return dto;
+
+		}
+		System.out.println("price is invalid");
+		return null;
+	}
+
+	@Override
+	public List<AmusementParkDTO> findByNameAndPrice(String name, double entryFee) {
+		System.out.println("Running findByNameAndPrice in service");
+		if (name != null && entryFee != 0) {
+			List<AmusementParkEntity> entities = this.amusementParkRepo.findByNameAndPrice(name, entryFee);
+			List<AmusementParkDTO> dtos = new ArrayList<AmusementParkDTO>();
+			for (AmusementParkEntity amusementParkEntity : entities) {
+				AmusementParkDTO amusementParkDTO = new AmusementParkDTO();
+				amusementParkDTO.setAddress(amusementParkEntity.getAddress());
+				amusementParkDTO.setChildrenAllowed(amusementParkEntity.isChildrenAllowed());
+				amusementParkDTO.setEntryFee(amusementParkEntity.getEntryFee());
+				amusementParkDTO.setName(amusementParkEntity.getName());
+				amusementParkDTO.setTicketType(amusementParkEntity.getTicketType());
+				amusementParkDTO.setId(amusementParkEntity.getId());
+				dtos.add(amusementParkDTO);
+			}
+			return dtos;
+		}
+		System.out.println("Data not valid");
+		return AmusementParkService.super.findByNameAndPrice(name, entryFee);
+	}
 }
