@@ -75,6 +75,7 @@ public class Ghost {
 		return age;
 	}
 
+	
 	public short getHeight() {
 		return height;
 	}

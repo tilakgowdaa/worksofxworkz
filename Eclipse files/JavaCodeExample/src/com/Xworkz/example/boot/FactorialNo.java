@@ -1,4 +1,4 @@
-package com.xworkz.coding;
+package com.Xworkz.example.boot;
 
 public class FactorialNo {
 
