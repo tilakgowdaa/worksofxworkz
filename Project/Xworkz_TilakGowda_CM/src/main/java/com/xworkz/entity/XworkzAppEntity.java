@@ -15,7 +15,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table(name = "xworkzapp_table")
-@NamedQuery(name = "findAll", query = "from XworkzAppEntity")
+@NamedQuery(name = "findEmailCount", query = "Select count(*) from XworkzAppEntity entity where entity.emailId=:email")
+@NamedQuery(name = "findUserIdCount" , query = "Select count(*) from XworkzAppEntity entity where entity.userId=:user")
+@NamedQuery(name="findMobileCount",query = "Select count(*) from XworkzAppEntity entity where entity.mobileNo=:mobile")
 public class XworkzAppEntity {
 	@Id
 	@Column(name = "signUpId")

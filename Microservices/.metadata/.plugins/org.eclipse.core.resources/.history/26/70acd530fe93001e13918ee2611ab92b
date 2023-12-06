@@ -1,0 +1,12 @@
+package com.xworkz.microservices1.Limits.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import com.xworkz.microservices1.Limits.LimitsApplication;
+
+@RestController
+public class LimitController {
+public Limits showLimits() {
+	return 
+}
+}

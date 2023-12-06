@@ -1,0 +1,5 @@
+package com.xworkz.microservices1.Limits.controller.entity;
+
+public class Limits {
+
+}
