@@ -1,0 +1,32 @@
+package in.net.liveasy.assignment.liveasy;
+
+import java.time.LocalDate;
+import java.util.Map;
+import java.util.Optional;
+
+public class Payload {
+	private String loadingPoint;
+	private String unloadingPoint;
+	private String productType;
+	private String truckType;
+	private int noOfTrucks;
+	private int weight;
+	private String comment;
+	private String shipperId;
+	private LocalDate date;
+
+	public Payload(String loadingPoint, String unloadingPoint, String productType, String truckType, int noOfTrucks,
+			int weight, String comment, String shipperId, LocalDate date) {
+		super();
+		this.loadingPoint = loadingPoint;
+		this.unloadingPoint = unloadingPoint;
+		this.productType = productType;
+		this.truckType = truckType;
+		this.noOfTrucks = noOfTrucks;
+		this.weight = weight;
+		this.comment = comment;
+		this.shipperId = shipperId;
+		this.date = date;
+	}
+
+}

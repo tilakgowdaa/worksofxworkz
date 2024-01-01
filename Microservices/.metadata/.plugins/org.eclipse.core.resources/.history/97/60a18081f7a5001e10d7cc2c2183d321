@@ -1,0 +1,35 @@
+package in.net.liveasy.assignment.liveasy;
+
+import java.util.Collections;
+import java.util.Set;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import jakarta.validation.ConstraintViolation;
+import jakarta.validation.Validation;
+import jakarta.validation.Validator;
+import jakarta.validation.ValidatorFactory;
+
+@Service
+public class LiveasyServiceImpl implements LiveasyService {
+
+	@Autowired
+	private LiveasyRepo repo;
+
+	@Override
+	public Set<ConstraintViolation<Payload>> savePayload(Payload payload) {
+		ValidatorFactory validatorFactory = Validation.buildDefaultValidatorFactory();
+		Validator validator = validatorFactory.getValidator();
+		Set<ConstraintViolation<Payload>> violations = validator.validate(payload);
+		if (violations != null) {
+			violations.forEach(c->System.out.println(c.getMessage());
+			System.out.println("vio found");
+			return violations;
+		} else {
+			repo.save(payload);
+			return Collections.EMPTY_SET;
+
+		}
+	}
+
+}

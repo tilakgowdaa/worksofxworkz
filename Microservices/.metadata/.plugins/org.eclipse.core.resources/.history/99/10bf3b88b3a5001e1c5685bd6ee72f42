@@ -1,0 +1,7 @@
+package in.net.liveasy.assignment.liveasy;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface LiveasyRepo extends JpaRepository<T, ID> {
+
+}

@@ -1,0 +1,77 @@
+package com.xworkz.microservices.currencyexchange;
+
+import java.math.BigDecimal;
+
+import com.fasterxml.jackson.core.sym.Name;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+@Entity
+public class CurrencyEntity {
+	@Id
+	@Column(name = "ce_id")
+	private long id;
+	@Column(name = "ce_from")
+	private String from;
+	@Column(name = "ce_to")
+	private String to;
+	@Column(name = "ce_rate")
+	private BigDecimal coversionRate;
+	@Column(name = "ce_environment")
+	private String environment;
+
+	public CurrencyEntity() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public CurrencyEntity(long id, String from, String to, BigDecimal coversionRate, String environment) {
+		super();
+		this.id = id;
+		this.from = from;
+		this.to = to;
+		this.coversionRate = coversionRate;
+		this.environment = environment;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getFrom() {
+		return from;
+	}
+
+	public void setFrom(String from) {
+		this.from = from;
+	}
+
+	public String getTo() {
+		return to;
+	}
+
+	public void setTo(String to) {
+		this.to = to;
+	}
+
+	public BigDecimal getCoversionRate() {
+		return coversionRate;
+	}
+
+	public void setCoversionRate(BigDecimal coversionRate) {
+		this.coversionRate = coversionRate;
+	}
+
+	public String getEnvironment() {
+		return environment;
+	}
+
+	public void setEnvironment(String environment) {
+		this.environment = environment;
+	}
+
+}

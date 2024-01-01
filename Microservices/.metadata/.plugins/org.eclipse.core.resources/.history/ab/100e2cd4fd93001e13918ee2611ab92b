@@ -1,5 +1,0 @@
-package com.xworkz.microservices1.Limits.controller;
-
-public class LimitController {
-
-}

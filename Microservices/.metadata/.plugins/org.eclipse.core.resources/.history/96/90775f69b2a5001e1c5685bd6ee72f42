@@ -1,0 +1,29 @@
+package in.net.liveasy.assignment.liveasy;
+
+public class ShipperId {
+
+	private Long shipper;
+
+	public ShipperId() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public ShipperId(Long shipper) {
+		super();
+		this.shipper = shipper;
+	}
+
+	@Override
+	public String toString() {
+		return "ShipperId [shipper=" + shipper + "]";
+	}
+
+	public Long getShipper() {
+		return shipper;
+	}
+
+	public void setShipper(Long shipper) {
+		this.shipper = shipper;
+	}
+
+}

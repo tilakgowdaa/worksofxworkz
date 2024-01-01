@@ -1,0 +1,5 @@
+package in.net.liveasy.assignment.liveasy;
+
+public interface LiveasyService {
+
+}

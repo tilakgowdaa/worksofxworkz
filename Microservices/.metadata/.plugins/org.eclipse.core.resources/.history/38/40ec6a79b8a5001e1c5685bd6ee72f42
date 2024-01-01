@@ -1,0 +1,118 @@
+package in.net.liveasy.assignment.liveasy;
+
+import java.time.LocalDate;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "payload")
+public class Payload {
+	@Id
+	@Column(name = "pl_Id")
+	private Long shipperId;
+	@Column(name = "pl_loadpoint")
+	private String loadingPoint;
+	@Column(name = "unloadPoint")
+	private String unloadingPoint;
+	@Column(name = "pl_productType")
+	private String productType;
+	@Column(name = "pl_truckType")
+	private String truckType;
+	@Column(name = "pl_noOfTrucks")
+	private int noOfTrucks;
+	@Column(name = "pl_weight")
+	private int weight;
+	@Column(name = "pl_comment")
+	private String comment;
+	@Column(name = "pl_date")
+	private LocalDate date;
+
+	public Payload(String loadingPoint, String unloadingPoint, String productType, String truckType, int noOfTrucks,
+			int weight, String comment, Long shipperId, LocalDate date) {
+		super();
+		this.loadingPoint = loadingPoint;
+		this.unloadingPoint = unloadingPoint;
+		this.productType = productType;
+		this.truckType = truckType;
+		this.noOfTrucks = noOfTrucks;
+		this.weight = weight;
+		this.comment = comment;
+		this.shipperId = shipperId;
+		this.date = date;
+	}
+
+	public String getLoadingPoint() {
+		return loadingPoint;
+	}
+
+	public void setLoadingPoint(String loadingPoint) {
+		this.loadingPoint = loadingPoint;
+	}
+
+	public String getUnloadingPoint() {
+		return unloadingPoint;
+	}
+
+	public void setUnloadingPoint(String unloadingPoint) {
+		this.unloadingPoint = unloadingPoint;
+	}
+
+	public String getProductType() {
+		return productType;
+	}
+
+	public void setProductType(String productType) {
+		this.productType = productType;
+	}
+
+	public String getTruckType() {
+		return truckType;
+	}
+
+	public void setTruckType(String truckType) {
+		this.truckType = truckType;
+	}
+
+	public int getNoOfTrucks() {
+		return noOfTrucks;
+	}
+
+	public void setNoOfTrucks(int noOfTrucks) {
+		this.noOfTrucks = noOfTrucks;
+	}
+
+	public int getWeight() {
+		return weight;
+	}
+
+	public void setWeight(int weight) {
+		this.weight = weight;
+	}
+
+	public String getComment() {
+		return comment;
+	}
+
+	public void setComment(String comment) {
+		this.comment = comment;
+	}
+
+	public Long getShipperId() {
+		return shipperId;
+	}
+
+	public void setShipperId(Long shipperId) {
+		this.shipperId = shipperId;
+	}
+
+	public LocalDate getDate() {
+		return date;
+	}
+
+	public void setDate(LocalDate date) {
+		this.date = date;
+	}
+
+}

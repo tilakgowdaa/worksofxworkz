@@ -1,0 +1,28 @@
+package in.net.liveasy.assignment.liveasy;
+
+import java.util.Set;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import jakarta.validation.ConstraintViolation;
+
+@RestController
+public class LiveasyController {
+	@Autowired
+	private LiveasyService service;
+
+	@PostMapping("/load")
+	public String addPayload(@RequestBody Payload payload) {
+		Set<ConstraintViolation<Payload>> violation = service.savePayload(payload);
+		if (violation != null) {
+			violation.forEach(c -> System.out.println(c.getMessage()));
+			return "Violations found";
+		} else {
+			return "loads details added successfully";
+		}
+	}
+
+}

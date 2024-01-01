@@ -1,0 +1,14 @@
+package in.net.liveasy.assignment.liveasy;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class LiveasyServiceImpl implements LiveasyService {
+
+	@Override
+	public boolean savePayload(Payload payload) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}
