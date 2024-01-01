@@ -11,7 +11,11 @@ public interface XworkzAppService {
 
 	Set<ConstraintViolation<XworkzAppDto>> validate(XworkzAppDto xworkzAppDto);
 
-	List<XworkzAppDto> findAllService();
+	long emailCountService(String email);
+	
+	long mobileCountService(String mobileNo);
+	
+	long userIdCountService(String userId);
 
 	boolean saveService(XworkzAppDto xworkzAppDto);
 }

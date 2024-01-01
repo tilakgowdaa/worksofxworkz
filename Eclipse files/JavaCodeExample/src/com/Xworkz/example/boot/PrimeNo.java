@@ -2,7 +2,7 @@ package com.Xworkz.example.boot;
 
 public class PrimeNo {
 public static void main(String[] args) {
-	int no=12;
+	int no=11;
 	String res="prime No";
 	
 	for(int i=2;i<no;i++) {

@@ -1,0 +1,7 @@
+package in.net.liveasy.assignment.liveasy;
+
+import java.util.UUID;
+
+public class CustomUUID extends UUID {
+
+}

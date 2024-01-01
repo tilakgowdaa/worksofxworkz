@@ -1,0 +1,23 @@
+package in.net.liveasy.assignment.liveasy;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class LiveasyController {
+	@Autowired
+	private LiveasyService service;
+
+	@PostMapping("/load")
+	public String addPayload(@RequestBody Payload payload) {
+		boolean saved = service.savePayload(payload);
+		if (saved = true) {
+			return "loads details added successfully";
+		} else {
+			return "Unable to save";
+		}
+	}
+
+}

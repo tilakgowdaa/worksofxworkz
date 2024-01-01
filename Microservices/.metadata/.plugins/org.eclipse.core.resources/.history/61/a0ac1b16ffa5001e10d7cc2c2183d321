@@ -1,0 +1,32 @@
+package in.net.liveasy.assignment.liveasy;
+
+import java.util.Collections;
+import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class LiveasyServiceImpl implements LiveasyService {
+
+	@Autowired
+	private LiveasyRepo repo;
+
+	@Override
+	public boolean savePayload(Payload payload) {
+		repo.save(payload);
+		return true;
+	}
+
+	@Override
+	public List<Payload> fetchPaylaod(UUID id) {
+		if(id!=null) {
+			System.out.println("repay ser");
+		return (List<Payload>) repo.findById(id).get();
+		}
+		return Collections.emptyList();
+	}
+
+}

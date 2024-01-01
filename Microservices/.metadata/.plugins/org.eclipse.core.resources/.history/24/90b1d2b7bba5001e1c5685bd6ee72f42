@@ -1,0 +1,11 @@
+package in.net.liveasy.assignment.liveasy;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class LiveasyController {
+	public LiveasyController() {
+		System.out.println("Running LiveasyController");
+	}
+
+}

@@ -1,0 +1,34 @@
+package in.net.liveasy.assignment.liveasy;
+
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class LiveasyController {
+	public LiveasyController() {
+		System.out.println("Running LiveasyController");
+	}
+
+	@GetMapping("/see")
+	public Payload see() {
+		System.out.println("Running seeee");
+		ShipperId id=new ShipperId();
+		id.setShipper(22l);
+		ShipperId id2=new ShipperId();
+		id.setShipper(33l);
+		List<ShipperId> list=new ArrayList<>();
+		list.add(id);
+		list.add(id2);
+		Payload pay=new Payload();
+		//pay.setShipperId(list);
+		
+		
+		return new Payload("Ind", "pak", "food", "B", 2, 222, "coming",list,  LocalDate.now());
+	}
+
+}

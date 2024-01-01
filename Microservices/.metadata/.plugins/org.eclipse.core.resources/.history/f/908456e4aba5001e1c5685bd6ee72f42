@@ -1,0 +1,19 @@
+package in.net.liveasy.assignment.liveasy;
+
+public class ShipperId {
+
+	private Long shipper;
+
+	public ShipperId(Long shipper) {
+		super();
+		this.shipper = shipper;
+	}
+
+	@Override
+	public String toString() {
+		return "ShipperId [shipper=" + shipper + "]";
+	}
+	
+	
+
+}

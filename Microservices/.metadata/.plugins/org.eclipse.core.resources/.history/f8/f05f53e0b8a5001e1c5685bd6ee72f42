@@ -1,0 +1,6 @@
+package in.net.liveasy.assignment.liveasy;
+
+public interface LiveasyService {
+
+	public boolean savePayload(Payload payload);
+}

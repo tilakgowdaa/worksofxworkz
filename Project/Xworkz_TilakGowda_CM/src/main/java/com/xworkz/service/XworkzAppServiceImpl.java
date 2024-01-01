@@ -1,8 +1,6 @@
 package com.xworkz.service;
 
-import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 import java.util.Set;
 
 import javax.validation.ConstraintViolation;
@@ -18,49 +16,63 @@ import com.xworkz.dto.XworkzAppDto;
 import com.xworkz.entity.XworkzAppEntity;
 import com.xworkz.repository.XworkzAppRepository;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Service
 public class XworkzAppServiceImpl implements XworkzAppService {
 	@Autowired
 	public XworkzAppRepository xworkzAppRepository;
 
 	public XworkzAppServiceImpl() {
-		System.out.println("Running XworkzAppServiceImpl");
+		log.info("Running XworkzAppServiceImpl");
 	}
 
 	@Override
 	public Set<ConstraintViolation<XworkzAppDto>> validate(XworkzAppDto xworkzAppDto) {
-		System.out.println("Running validateAndSave ");
+		log.info("Running validateAndSave ");
 		ValidatorFactory validatorFactory = Validation.buildDefaultValidatorFactory();
 		Validator validator = validatorFactory.getValidator();
 		Set<ConstraintViolation<XworkzAppDto>> violation = validator.validate(xworkzAppDto);
 		if (!violation.isEmpty()) {
 			return violation;
-		} else {
-			return Collections.emptySet();
 		}
+		if (!xworkzAppDto.getPassword().equals(xworkzAppDto.getConfirmPassword())) {
+			return null;
+		}
+		if (this.xworkzAppRepository.emailCount() == 0 && this.xworkzAppRepository.mobileCount() == 0
+				&& this.xworkzAppRepository.userIdCount() == 0) {
+			this.saveService(xworkzAppDto);
+		}
+		return Collections.emptySet();
 
 	}
 
 	@Override
-	public List<XworkzAppDto> findAllService() {
-		System.out.println("Running findAll");
-		List<XworkzAppEntity> entity = this.xworkzAppRepository.findAll();
-		List<XworkzAppDto> dtos = new ArrayList();
-		for (XworkzAppEntity xworkzAppEntity : entity) {
-			XworkzAppDto dto = new XworkzAppDto();
-			dto.setUserId(xworkzAppEntity.getUserId());
-			dto.setEmail(xworkzAppEntity.getEmail());
-			dto.setMobileNo(xworkzAppEntity.getMobileNo());
-			dto.setPassword(xworkzAppEntity.getPassword());
-			dtos.add(dto);
-		}
-		return dtos;
+	public long emailCountService(String email) {
+		log.info("Running emailCountService");
+		long no = this.xworkzAppRepository.emailCount();
+		return no;
+	}
+
+	@Override
+	public long mobileCountService(String mobileNo) {
+		log.info("Running mobileCountService");
+		long no = this.xworkzAppRepository.mobileCount();
+		return no;
+	}
+
+	@Override
+	public long userIdCountService(String userId) {
+		log.info("Running userIdCountService");
+		long no = this.xworkzAppRepository.userIdCount();
+		return no;
 	}
 
 	@Override
 	public boolean saveService(XworkzAppDto xworkzAppDto) {
-		System.out.println("Running saveService");
-		XworkzAppEntity entity=new XworkzAppEntity();
+		log.info("Running saveService");
+		XworkzAppEntity entity = new XworkzAppEntity();
 		BeanUtils.copyProperties(xworkzAppDto, entity);
 		this.xworkzAppRepository.save(entity);
 		return true;

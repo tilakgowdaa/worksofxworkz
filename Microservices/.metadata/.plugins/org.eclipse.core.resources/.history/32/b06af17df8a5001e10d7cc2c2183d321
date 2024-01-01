@@ -1,0 +1,10 @@
+package in.net.liveasy.assignment.liveasy;
+
+import java.util.Set;
+
+import jakarta.validation.ConstraintViolation;
+
+public interface LiveasyService {
+
+	public Set<ConstraintViolation<Payload>> savePayload(Payload payload);
+}

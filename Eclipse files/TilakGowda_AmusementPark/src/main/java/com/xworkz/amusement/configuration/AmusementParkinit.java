@@ -17,7 +17,7 @@ public class AmusementParkinit extends AbstractAnnotationConfigDispatcherServlet
 		return null;
 	}
 
-	@Override
+	@Override 
 	protected String[] getServletMappings() {
 		System.out.println("Running getServletMappings");
 		return new String[] { "/" };

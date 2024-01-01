@@ -1,0 +1,18 @@
+package in.net.liveasy.assignment.liveasy_load;
+
+import java.time.LocalDate;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class LiveasyController {
+
+	@GetMapping("/baa")
+	public Payload see() {
+		System.out.println("Running seeee");
+		ShipperId ship = new ShipperId(20l);
+		return new Payload("Ind", "pak", "food", "B", 2, 222, "coming", ship, LocalDate.now());
+	}
+
+}

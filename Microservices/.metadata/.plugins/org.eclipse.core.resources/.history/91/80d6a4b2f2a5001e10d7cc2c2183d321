@@ -1,0 +1,70 @@
+package in.net.liveasy.assignment.liveasy;
+
+import java.time.LocalDate;
+import java.util.UUID;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+
+@Entity
+@Table(name = "payload")
+@Data
+@AllArgsConstructor
+public class Payload {
+	@Id
+	@GeneratedValue(strategy = GenerationType.UUID)
+	@Column(name = "pl_Id")
+	private UUID shipperId;
+
+	@NotBlank(message = "LoadingPoint cannot be empty")
+	@Size(max = 20, min = 3, message = "LoadingPoint characters must be greater then 3 and lesser than 20")
+	@Column(name = "pl_loadpoint")
+	private String loadingPoint;
+
+	@NotBlank(message = "unLoadingPoint cannot be empty")
+	@Size(max = 20, min = 3, message = "unLoadingPoint characters must be greater then 3 and lesser than 20")
+	@Column(name = "unloadPoint")
+	private String unloadingPoint;
+
+	@Column(name = "pl_productType")
+	@NotBlank(message = "ProductType cannot be empty")
+	@Size(max = 20, min = 3, message = "ProductType characters must be greater then 3 and lesser than 20")
+	private String productType;
+
+	@Column(name = "pl_truckType")
+	@NotBlank(message = "TruckType cannot be empty")
+	@Size(max = 20, min = 3, message = "TruckType characters must be greater then 3 and lesser than 20")
+	private String truckType;
+
+	@Column(name = "pl_noOfTrucks")
+	@NotNull(message = "noOfTrucks cannot be null")
+	@Min(value = 1)
+	@Max(value = 30)
+	private int noOfTrucks;
+
+	@Column(name = "pl_weight")
+	@NotNull(message = "weight cannot be null")
+	@Min(value = 1)
+	@Max(value = 100000)
+	private int weight;
+
+	@Column(name = "pl_comment")
+	private String comment;
+
+	@NotNull(message = "Date cannot be null")
+	@Column(name = "pl_date")
+	private LocalDate date;
+
+}
